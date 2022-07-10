@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginContext" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstAdminLoginFormController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/style/image/Artboard%201%20(1).png" />
+         </image>
+      </ImageView>
+      <Text layoutX="142.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Start your own unique course dreaming of">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="156.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="becoming a Human Resource Manager&quot;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="text" layoutX="142.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="577.68359375">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Pane fx:id="loginForm" layoutX="1100.0" layoutY="277.0" prefHeight="329.0" prefWidth="315.0" style="-fx-background-color: #AAB2E9; -fx-background-radius: 10;">
+         <children>
+            <Pane prefHeight="329.0" prefWidth="315.0" style="-fx-background-radius: 10; -fx-background-color: #ffffff;">
+               <children>
+                  <AnchorPane layoutX="30.0" layoutY="106.0" prefHeight="47.0" prefWidth="211.0" style="-fx-border-color: #000000; -fx-border-radius: 8;">
+                     <children>
+                        <TextField fx:id="txtUsername" layoutX="5.0" layoutY="9.0" onKeyReleased="#textFields_Key_Released" prefHeight="30.0" prefWidth="240.0" styleClass="textField" stylesheets="@../assets/style/FirstAdminLogin.css" />
+                        <Label layoutX="14.0" layoutY="-11.0" styleClass="textLabel" stylesheets="@../assets/style/FirstAdminLogin.css" text="Enter Username" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="30.0" layoutY="185.0" prefHeight="47.0" prefWidth="225.0" style="-fx-border-color: #000000; -fx-border-radius: 8;">
+                     <children>
+                        <TextField layoutX="11.0" layoutY="8.0" prefHeight="31.0" prefWidth="243.0" styleClass="textField" stylesheets="@../assets/style/FirstAdminLogin.css" />
+                        <Label layoutX="11.0" layoutY="-8.0" styleClass="textLabel" stylesheets="@../assets/style/FirstAdminLogin.css" text="Enter Password" />
+                        <PasswordField fx:id="txtPassword" layoutX="8.0" layoutY="9.0" prefHeight="30.0" prefWidth="240.0" styleClass="textField" stylesheets="@../assets/style/FirstAdminLogin.css" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="73.0" layoutY="260.0" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="20.0" prefWidth="171.0" style="-fx-background-radius: 50; -fx-background-color: #ff7f50;" text="&gt; Login">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="134.0" layoutY="23.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/style/T%20Image/LPEC_logo-1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

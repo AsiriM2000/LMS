@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="viewAnchor" prefHeight="400.0" prefWidth="600.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LectureViewFormController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="39.0" prefHeight="274.0" prefWidth="544.0" style="-fx-background-color: #00adad;" styleClass="textPane">
+         <children>
+            <TableView fx:id="tblLecture" layoutX="24.0" layoutY="24.0" prefHeight="225.0" prefWidth="497.0">
+              <columns>
+                <TableColumn fx:id="colName" prefWidth="98.0" text="Batch Name" />
+                  <TableColumn fx:id="colSubId" prefWidth="98.0" text="Subject Id" />
+                  <TableColumn fx:id="colLecId" prefWidth="98.0" text="Lec Id" />
+                  <TableColumn fx:id="colDate" prefWidth="98.0" text="Date" />
+                  <TableColumn fx:id="colTime" prefWidth="104.0" text="Time" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="472.0" layoutY="343.0" onAction="#BackOnAction" prefHeight="8.0" prefWidth="100.0" style="-fx-background-color: #7C20DD; -fx-background-radius: 8;" styleClass="textPane" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

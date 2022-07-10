@@ -1,0 +1,30 @@
+.dashPane{
+    -fx-background-color: #00A8F0;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-color: #00A8F0;
+    -fx-border-radius: 8px;
+}
+.dashPane1{
+    -fx-background-color: #F35220;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-color: #F35220;
+    -fx-border-radius: 8px;
+}
+.dashPane2{
+    -fx-background-color: #FFBB02;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-color: #FFBB02;
+    -fx-border-radius: 8px;
+}
+.dashPane3{
+    -fx-background-color: #82BD01;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-color: #82BD01;
+    -fx-border-radius: 8px;
+}
+.dashPane4{
+    -fx-background-color: #710100;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-color: #710100;
+    -fx-border-radius: 8px;
+}

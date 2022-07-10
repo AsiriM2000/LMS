@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementFormController">
+   <children>
+      <Label layoutX="92.0" layoutY="55.0" text="Dashboard -&gt; Manage" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="51.0" layoutY="126.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtBatchName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Batch Name" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1062.0" layoutY="133.0" onAction="#addBatch" prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Batch'">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1202.0" layoutY="133.0" onAction="#BatchViewOnAction" prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 8;" text="View">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="52.0" layoutY="96.0" prefHeight="0.0" prefWidth="1246.0" />
+      <Separator layoutX="52.0" layoutY="237.0" prefHeight="0.0" prefWidth="1246.0" />
+      <AnchorPane layoutX="58.0" layoutY="367.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtCourseName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Course Name" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1062.0" layoutY="374.0" onAction="#addCourse" prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Course">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1202.0" layoutY="374.0" onAction="#CourseViewOnAction" prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 8;" text="View">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="58.0" layoutY="297.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtCourseId" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Course Id" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="46.0" layoutY="482.0" prefHeight="0.0" prefWidth="1246.0" />
+      <AnchorPane layoutX="51.0" layoutY="705.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtSubName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Subject Name" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1052.0" layoutY="712.0" onAction="#addSubject" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Subject">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1202.0" layoutY="712.0" onAction="#SubjectViewOnAction" prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 8;" text="View">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="51.0" layoutY="618.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtSubId" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Subject Id" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbCourseId" layoutX="53.0" layoutY="537.0" prefHeight="38.0" prefWidth="172.0" styleClass="textPane" />
+      <Label layoutX="81.0" layoutY="526.0" styleClass="textLabel" text="Course Id" />
+      <Button fx:id="btnRefresh" layoutX="1252.0" layoutY="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="15.0" style="-fx-background-radius: 10;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/style/L%20image/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

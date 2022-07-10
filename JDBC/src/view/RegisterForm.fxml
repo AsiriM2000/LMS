@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="registerAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
+   <children>
+      <Label layoutX="62.0" layoutY="24.0" text="Dashboard -&gt; Register Student" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="62.0" layoutY="135.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtRegId" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="H00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="391.0" prefHeight="45.0" prefWidth="337.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtStudentName" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Student Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="477.0" prefHeight="45.0" prefWidth="300.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Email" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbCourse" layoutX="62.0" layoutY="218.0" prefHeight="38.0" prefWidth="337.0" styleClass="textPane" />
+      <Label layoutX="86.0" layoutY="210.0" styleClass="textLabel" text="Course " />
+      <AnchorPane layoutX="62.0" layoutY="652.0" prefHeight="45.0" prefWidth="300.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtAddress" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Address" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="62.0" layoutY="740.0" prefHeight="45.0" prefWidth="300.0" styleClass="textPane" AnchorPane.bottomAnchor="67.0">
+         <children>
+            <TextField fx:id="txtCity" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="City" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbOl" layoutX="518.0" layoutY="131.0" prefHeight="38.0" prefWidth="172.0" styleClass="textPane" />
+      <Label layoutX="542.0" layoutY="123.0" styleClass="textLabel" text="O/L Completed" />
+      <JFXComboBox fx:id="cmbAl" layoutX="518.0" layoutY="212.0" prefHeight="38.0" prefWidth="172.0" styleClass="textPane" />
+      <Label layoutX="542.0" layoutY="204.0" styleClass="textLabel" text="A/L Completed" />
+      <JFXButton fx:id="btnRegisterStudent" layoutX="623.0" layoutY="742.0" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Register Student" AnchorPane.bottomAnchor="71.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateStudent" layoutX="854.0" layoutY="742.0" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Update Student" AnchorPane.bottomAnchor="71.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteStudent" layoutX="1088.0" layoutY="742.0" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Delete Student" AnchorPane.bottomAnchor="71.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="txtDateOfBirthS" layoutX="62.0" layoutY="571.0" prefHeight="38.0" prefWidth="176.0" styleClass="textPane" />
+      <Label layoutX="86.0" layoutY="563.0" styleClass="textLabel" text="Date Of Birth" />
+      <AnchorPane layoutX="518.0" layoutY="305.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtAmount" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="145.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Fee" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnAllRegisterStudent" layoutX="1078.0" layoutY="131.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-color: #ffd700; -fx-background-radius: 8;" text="All Register Student">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="1174.0" layoutY="614.0" onMouseClicked="#RegisterPrintMouseClicked" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/style/L%20image/printer.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmbBatch" layoutX="62.0" layoutY="306.0" prefHeight="38.0" prefWidth="176.0" styleClass="textPane" />
+      <Label layoutX="86.0" layoutY="298.0" styleClass="textLabel" text="Batch" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddLecturerFormController">
+   <children>
+      <Label layoutX="72.0" layoutY="34.0" text="Dashboard -&gt; Lecturer" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="83.0" layoutY="365.0" prefHeight="448.0" prefWidth="1150.0" style="-fx-background-color: #00adad;" styleClass="textPane" />
+      <AnchorPane layoutX="75.0" layoutY="116.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtLecId" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="L00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Lecturer Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="75.0" layoutY="202.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtFname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="First Name'" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="75.0" layoutY="291.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtLname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Last Name" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbGender" layoutX="502.0" layoutY="116.0" prefHeight="45.0" prefWidth="156.0" styleClass="textPane" />
+      <AnchorPane layoutX="503.0" layoutY="202.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtCity" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="City" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="503.0" layoutY="291.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtExperience" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Experience " />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnAddLecturer" layoutX="1077.0" layoutY="106.0" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Lecturer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="521.0" layoutY="108.0" styleClass="textLabel" text="Gender" />
+      <TableView fx:id="tblLecturerDetails" layoutX="111.0" layoutY="388.0" prefHeight="401.0" prefWidth="1094.0">
+        <columns>
+          <TableColumn fx:id="colLecId" prefWidth="182.0" text="Lec Id" />
+            <TableColumn fx:id="colLecFName" prefWidth="182.0" text="First Name" />
+            <TableColumn fx:id="colLecLName" prefWidth="182.0" text="Last Name" />
+            <TableColumn fx:id="colLecGender" prefWidth="193.0" text="Gender" />
+            <TableColumn fx:id="colCity" prefWidth="170.0" text="City" />
+            <TableColumn fx:id="colExperience" prefWidth="184.0" text="Experience" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1077.0" layoutY="294.0" onAction="#DeleteLecturer" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #ff0000; -fx-background-radius: 8;" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

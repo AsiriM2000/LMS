@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="deleteAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteStudentFormController">
+   <children>
+      <Label layoutX="72.0" layoutY="35.0" text="Dashboard -&gt; Register Student -&gt; Delete Student" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="72.0" layoutY="155.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtRegId" layoutX="14.0" layoutY="10.0" onAction="#txtIdOnAction" prefHeight="25.0" prefWidth="321.0" promptText="H00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="72.0" layoutY="237.0" prefHeight="45.0" prefWidth="170.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtCourse" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="147.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Course" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="406.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtStudentName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Student Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="493.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Email" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="581.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtDateOfBirth" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Date Of Birth" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="73.0" layoutY="671.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtAddress" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Address" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="75.0" layoutY="759.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtCity" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="City" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1114.0" layoutY="759.0" onAction="#btnDeleteStudentOnAction" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #dc143c; -fx-background-radius: 8;" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="561.0" layoutY="155.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtOl" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="145.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="O/L" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="561.0" layoutY="230.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtAl" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="145.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="A/L" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="561.0" layoutY="310.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtRegisterFee" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="145.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Fee" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1114.0" layoutY="155.0" onAction="#btnBackOnAction" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #798DFD; -fx-background-radius: 8;" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="73.0" layoutY="316.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtBatchName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Batch Name" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

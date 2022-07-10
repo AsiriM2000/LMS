@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="600.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SubjectViewFormController">
+   <children>
+      <AnchorPane layoutX="38.0" layoutY="99.0" prefHeight="252.0" prefWidth="544.0" style="-fx-background-color: #00adad;" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <TableView fx:id="tblSubject" layoutX="26.0" layoutY="22.0" prefHeight="216.0" prefWidth="512.0" styleClass="textPane" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="22.0">
+               <columns>
+                  <TableColumn fx:id="colCourseIdSub" prefWidth="164.0" text="Course Id" />
+                  <TableColumn fx:id="colSubId" prefWidth="173.0" text="Subject Id" />
+                  <TableColumn fx:id="colSubName" prefWidth="173.0" text="Subject Name" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="491.0" layoutY="369.0" onAction="#cancelOnAction" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: #7C20DD;" styleClass="textPane" text="Cancel" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="490.0" />
+      <Label layoutX="38.0" layoutY="24.0" text="Subjects" textFill="#1201ff" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="383.0" layoutY="356.0" onAction="#deleteOnAction" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: #ff0000;" styleClass="textPane" text="Delete" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" />
+   </children>
+</AnchorPane>

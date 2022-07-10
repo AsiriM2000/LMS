@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addStudentAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddStudentFormController">
+   <children>
+      <AnchorPane layoutX="115.0" layoutY="128.0" prefHeight="45.0" prefWidth="351.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtFname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="Asiri" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="First Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="115.0" layoutY="199.0" prefHeight="45.0" prefWidth="351.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtLname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="Madhusanka" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Last Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="568.0" layoutY="124.0" prefHeight="45.0" prefWidth="351.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="madhusanka@gamil.com'" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Email" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="568.0" layoutY="199.0" prefHeight="45.0" prefWidth="351.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtContact" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="0766621021" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Contact" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbGender" layoutX="1074.0" layoutY="124.0" prefHeight="45.0" prefWidth="156.0" styleClass="textPane" />
+      <Label layoutX="1087.0" layoutY="116.0" styleClass="textLabel" text="Gender" />
+      <JFXButton fx:id="btnAddStudent" layoutX="1074.0" layoutY="202.0" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Student">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="111.0" layoutY="323.0" prefHeight="515.0" prefWidth="1115.0" style="-fx-background-color: #00adad;" styleClass="textPane" />
+      <TableView fx:id="tblStudentDetails" layoutX="142.0" layoutY="342.0" prefHeight="476.0" prefWidth="1057.0">
+        <columns>
+          <TableColumn fx:id="colFname" prefWidth="182.0" text="First Name" />
+            <TableColumn fx:id="colLname" prefWidth="182.0" text="Last Name" />
+            <TableColumn fx:id="colEmail" prefWidth="275.0" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="219.0" text="Contact" />
+            <TableColumn fx:id="colGender" prefWidth="196.0" text="Gender" />
+        </columns>
+      </TableView>
+      <Label layoutX="52.0" layoutY="14.0" text="Dashboard -&gt; Add Student" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1074.0" layoutY="260.0" onAction="#deleteOnAction" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #ff0000; -fx-background-radius: 8;" text="Delete Student">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

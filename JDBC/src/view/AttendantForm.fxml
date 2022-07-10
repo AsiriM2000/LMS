@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttendantFormController">
+   <children>
+      <Label layoutX="72.0" layoutY="34.0" text="Dashboard -&gt; Attendant" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="51.0" layoutY="114.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtRegId" layoutX="14.0" layoutY="10.0" onAction="#txtOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="370.0" promptText="H00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="570.0" layoutY="114.0" prefHeight="45.0" prefWidth="415.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtStudentName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Student Name" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbSubjectId" layoutX="51.0" layoutY="201.0" onAction="#cmbSubIdOnAction" prefHeight="45.0" prefWidth="247.0" styleClass="textPane" />
+      <Label layoutX="79.0" layoutY="192.0" styleClass="textLabel" text="Subject Id" />
+      <DatePicker fx:id="cmbDate" layoutX="1088.0" layoutY="114.0" prefHeight="39.0" prefWidth="191.0" styleClass="textPane" />
+      <Label layoutX="1107.0" layoutY="106.0" styleClass="textLabel" text="Date" />
+      <JFXTimePicker fx:id="time" defaultColor="#08650b" layoutX="1088.0" layoutY="197.0" prefHeight="45.0" prefWidth="191.0" styleClass="textPane" />
+      <JFXButton fx:id="btnMark" layoutX="1123.0" layoutY="269.0" onAction="#markOnAction" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Mark">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="570.0" layoutY="197.0" prefHeight="45.0" prefWidth="415.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtSubjectName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Subject Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="325.0" prefHeight="479.0" prefWidth="1226.0" style="-fx-background-color: #00adad;" styleClass="textPane" AnchorPane.bottomAnchor="45.0">
+         <children>
+            <TableView fx:id="tblAttendant" layoutX="28.0" layoutY="28.0" prefHeight="428.0" prefWidth="1167.0">
+              <columns>
+                <TableColumn fx:id="colRegId" prefWidth="201.0" text="Register ID" />
+                  <TableColumn fx:id="colStudentName" prefWidth="201.0" text="Student Name" />
+                  <TableColumn fx:id="colSubId" prefWidth="201.0" text="Subject ID" />
+                  <TableColumn fx:id="colSubName" prefWidth="201.0" text="Subject Name" />
+                  <TableColumn fx:id="colDate" prefWidth="201.0" text="Date" />
+                  <TableColumn fx:id="colTime" prefWidth="161.0" text="Time" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

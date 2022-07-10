@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="paymentContext" prefHeight="400.0" prefWidth="600.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentViewFormController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="95.0" prefHeight="252.0" prefWidth="544.0" style="-fx-background-color: #00adad;" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" AnchorPane.bottomAnchor="70.0">
+         <children>
+            <TableView fx:id="tblPayment" layoutX="27.0" layoutY="26.0" prefHeight="200.0" prefWidth="491.0">
+              <columns>
+                <TableColumn fx:id="colRegId" prefWidth="125.0" text="Register Id" />
+                  <TableColumn fx:id="colCourseId" prefWidth="125.0" text="Course Id" />
+                  <TableColumn fx:id="colMonth" prefWidth="125.0" text="Month" />
+                  <TableColumn fx:id="colPayment" prefWidth="115.0" text="Payment" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="481.0" layoutY="365.0" onAction="#cancelOnAction" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: #7C20DD;" styleClass="textPane" text="Cancel" AnchorPane.bottomAnchor="25.0" />
+      <Label layoutX="28.0" layoutY="20.0" text="Payment" textFill="#1201ff" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

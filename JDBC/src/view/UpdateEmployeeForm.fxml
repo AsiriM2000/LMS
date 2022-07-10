@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeUpdateAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateEmployeeFormController">
+   <children>
+      <Label layoutX="92.0" layoutY="36.0" text="Dashboard -&gt; Employee -&gt; Update Employee" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="92.0" layoutY="217.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmpId" layoutX="14.0" layoutY="10.0" onAction="#EmpIdOnAction" prefHeight="25.0" prefWidth="321.0" promptText="E00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Employee Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="296.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtFname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="First Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="376.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtLname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Last Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="469.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Email" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="548.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtContact" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Contact" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="628.0" prefHeight="45.0" prefWidth="159.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtSalary" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="133.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Salary" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnUpdate" layoutX="1114.0" layoutY="634.0" onAction="#UpdateEmployeeOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #ff7518; -fx-background-radius: 8;" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1114.0" layoutY="198.0" onAction="#btnBackOnAction" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #798DFD; -fx-background-radius: 8;" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

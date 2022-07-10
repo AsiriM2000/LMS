@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PaymentReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bce4594b-1bd8-4e3f-9d69-ba65286cd03a">
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="course" class="java.lang.String"/>
+	<parameter name="fee" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="480" y="0" width="75" height="37" uuid="361f6c30-f589-46ce-b167-c8f63b468744"/>
+				<textElement textAlignment="Right">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="80" height="80" uuid="4bf0a039-8ab4-4e9d-957d-e300a9e191b3"/>
+				<imageExpression><![CDATA["view/image/LPEC_logo-1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="67" height="24" uuid="db29728b-8014-43c6-be5a-8576a1c743b8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LPEC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="180" height="20" uuid="d5bbc981-c300-4ce1-b63b-4712d3315653"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Kiribathgoda Western Province 11600]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="26" width="80" height="20" uuid="f089b4a7-92d5-4e3b-bcc5-0e702ec38dea"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SriLanka]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement x="380" y="1" width="80" height="20" uuid="41099db0-90aa-4d8b-b34e-9398b366810a"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Invoice Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="21" width="80" height="20" uuid="51252728-3470-4e57-a872-3a2157490567"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Terms :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="40" width="80" height="20" uuid="f57f030c-dd42-466a-849d-1bb2f6240d54"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Due Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="60" width="80" height="20" uuid="bc1575e6-0922-4f1d-ac11-818609257dda"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Student ID :]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="476" y="3" width="75" height="20" uuid="b68a5993-e6ef-4b98-9a37-4f82e1d6a866"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="476" y="22" width="75" height="20" uuid="59b7d37c-55e9-49f4-8d37-b9798cd252ee"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Due on Receipt]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="476" y="42" width="75" height="20" uuid="74d19e09-d53b-4efe-8364-8f973eed3bf7"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="61" width="76" height="18" uuid="8f70f5c6-518b-4292-9530-ee21c6ce3226"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="43" width="60" height="20" uuid="a42928d3-9fe5-42d5-b13f-4df83a4cddff"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Bill To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="63" width="250" height="20" uuid="a46d4dad-0ee4-4e56-aa25-fc325ace9714"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="63" width="30" height="20" uuid="194007f4-b586-47da-9149-804d14704f94"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mrs.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="244" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" backcolor="#525252" uuid="18778039-308b-47da-bd4a-7fa6beffaf8b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" forecolor="#FFFFFF" uuid="ccab72e0-345f-41b9-af64-c80fe1d0b8ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="0" width="73" height="20" forecolor="#FFFFFF" uuid="62dc4773-cce8-4db6-b3d4-24614bf9bd57"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="73" height="20" forecolor="#FFFFFF" uuid="d34645cc-d5c1-4500-a4c6-2c209590b942"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="0" width="73" height="20" forecolor="#FFFFFF" uuid="446b16c6-36e5-41dd-bcb1-faf052d903e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="36" width="30" height="20" uuid="af99034b-a7bd-495e-9128-52aeba762820"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[1
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="555" height="1" uuid="a477e61e-d3f9-4f61-b477-20a903333450"/>
+			</line>
+			<textField>
+				<reportElement x="37" y="36" width="243" height="20" uuid="da03cb06-63c4-4efc-bf08-2dc56e5401de"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{course}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="37" width="30" height="20" uuid="e7da0724-1198-44ce-8f76-edfeb8481a07"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[1
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="471" y="37" width="80" height="20" uuid="990db2b2-080d-4000-9dbf-b2ddc7c117d5"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="80" width="60" height="20" uuid="b0060bf4-f38d-49be-8703-d0a7cf55d4c7"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="472" y="80" width="80" height="20" uuid="a655d9b9-9a1f-41ff-af32-94de7dfd48a7"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="106" width="80" height="20" uuid="1126863e-53b4-47d1-a833-0b28b9dcfe23"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="108" width="60" height="20" uuid="bbebd5c6-1173-4c7d-b9ec-a5b28cd9a176"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="156" width="60" height="20" uuid="da2930c8-cd59-4996-bd75-42e4e0386701"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Notes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="176" width="230" height="20" uuid="fb0ff2e3-eb5a-4e38-9c6c-4e6efd6a1375"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Thank you for the payment. You just made our day.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="202" width="110" height="20" uuid="34d5f641-6532-47ce-b2f9-9c32b9db485d"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Terms & Conditions
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="222" width="420" height="20" uuid="47b73701-ab1d-4ca7-b4ce-ea17d82ad4a1"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[This Invoice is valid only from the day you make the payment until the 10th of the next month]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="66" splitType="Stretch">
+			<line>
+				<reportElement x="-3" y="10" width="555" height="1" uuid="c297f434-5fc7-4e35-a605-ab1909803b65"/>
+			</line>
+			<staticText>
+				<reportElement x="203" y="20" width="148" height="30" uuid="f18cc598-f619-4cc8-be74-bae441f07c68"/>
+				<text><![CDATA[Email : lpec.general@gmail.com
+Contact : +94 11 2 907 852]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

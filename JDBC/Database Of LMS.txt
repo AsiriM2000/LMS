@@ -1,0 +1,119 @@
+DROP DATABASE IF EXISTS Learning_Management_System;
+CREATE DATABASE IF NOT EXISTS Learning_Management_System;
+SHOW DATABASES;
+USE Learning_Management_System;
+
+DROP TABLE IF EXISTS Student;
+CREATE TABLE IF NOT EXISTS Student(
+                                      f_name VARCHAR (40) NOT NULL,
+                                      l_name VARCHAR (40) NOT NULL,
+                                      email VARCHAR (50),
+                                      gender VARCHAR (10),
+                                      contact VARCHAR (10)
+);
+
+DROP TABLE IF EXISTS Batch;
+CREATE TABLE IF NOT EXISTS Batch(
+                                    batch_name VARCHAR (10) NOT NULL,
+                                    CONSTRAINT PRIMARY KEY (batch_name)
+);
+
+DROP TABLE IF EXISTS Register;
+CREATE TABLE IF NOT EXISTS Register(
+                                       register_id VARCHAR (10) NOT NULL,
+                                       course_name VARCHAR (30),
+                                       batch_name VARCHAR(30),
+                                       student_name VARCHAR (40),
+                                       email VARCHAR (50),
+                                       dob DATE,
+                                       address TEXT,
+                                       city VARCHAR (30),
+                                       ol VARCHAR (10),
+                                       al VARCHAR (10),
+                                       amount DECIMAL(10,2),
+                                       CONSTRAINT PRIMARY KEY (register_id),
+                                       CONSTRAINT FOREIGN KEY (batch_name) REFERENCES Batch (batch_name)
+                                           ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+DROP TABLE IF EXISTS Employee;
+CREATE TABLE IF NOT EXISTS Employee(
+                                       employee_id VARCHAR (10) NOT NULL,
+                                       f_name VARCHAR (40) NOT NULL,
+                                       l_name VARCHAR (40) NOT NULL,
+                                       email VARCHAR (50),
+                                       contact VARCHAR (10),
+                                       salary DOUBLE,
+                                       CONSTRAINT PRIMARY KEY (employee_id)
+);
+DROP TABLE IF EXISTS Course;
+CREATE TABLE IF NOT EXISTS Course(
+                                     course_id VARCHAR (10) NOT NULL,
+                                     course_name VARCHAR (30) NOT NULL,
+                                     CONSTRAINT PRIMARY KEY(course_id)
+);
+
+DROP TABLE IF EXISTS Subject;
+CREATE TABLE IF NOT EXISTS Subject(
+                                      course_id VARCHAR (10) NOT NULL,
+                                      subject_id VARCHAR (10) NOT NULL,
+                                      subject_name VARCHAR (20) NOT NULL ,
+                                      CONSTRAINT PRIMARY KEY (subject_id),
+                                      CONSTRAINT FOREIGN KEY (course_id) REFERENCES Course (course_id)
+                                          ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+DROP TABLE IF EXISTS Payment;
+CREATE TABLE IF NOT EXISTS Payment(
+                                      register_id VARCHAR (10) NOT NULL,
+                                      course_id VARCHAR (10) NOT NULL,
+                                      month VARCHAR(15) NOT NULL ,
+                                      month_fee DOUBLE NOT NULL ,
+                                      CONSTRAINT FOREIGN KEY (register_id) REFERENCES Register (register_id)
+                                          ON DELETE CASCADE ON UPDATE CASCADE,
+                                      CONSTRAINT FOREIGN KEY (course_id) REFERENCES Course (course_id)
+                                          ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+DROP TABLE IF EXISTS Attendant;
+CREATE TABLE IF NOT EXISTS Attendant(
+                                        register_id VARCHAR (10) NOT NULL,
+                                        student_name VARCHAR (40) NOT NULL,
+                                        subject_id VARCHAR (10) NOT NULL,
+                                        subject_name VARCHAR (20) NOT NULL ,
+                                        date DATE,
+                                        time TIME,
+                                        CONSTRAINT FOREIGN KEY (register_id) REFERENCES Register (register_id)
+                                            ON DELETE CASCADE ON UPDATE CASCADE,
+                                        CONSTRAINT FOREIGN KEY (subject_id) REFERENCES Subject (subject_id)
+                                            ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+DROP TABLE IF EXISTS Lecturer;
+CREATE TABLE IF NOT EXISTS Lecturer(
+                                       lec_id VARCHAR (10) NOT NULL,
+                                       f_name VARCHAR (40) NOT NULL,
+                                       l_name VARCHAR (40) NOT NULL,
+                                       gender VARCHAR (10) NOT NULL,
+                                       experience TEXT,
+                                       city VARCHAR (30),
+                                       CONSTRAINT PRIMARY KEY (lec_id)
+);
+
+
+DROP TABLE IF EXISTS Lecture;
+CREATE TABLE IF NOT EXISTS Lecture(
+                                      batch_name VARCHAR (10)NOT NULL,
+                                      subject_id VARCHAR (10) NOT NULL,
+                                      lec_id VARCHAR (10) NOT NULL,
+                                      date DATE,
+                                      time TIME,
+                                      CONSTRAINT FOREIGN KEY (batch_name) REFERENCES Batch (batch_name)
+                                          ON DELETE CASCADE ON UPDATE CASCADE,
+                                      CONSTRAINT FOREIGN KEY (subject_id) REFERENCES Subject (subject_id)
+                                          ON DELETE CASCADE ON UPDATE CASCADE,
+                                      CONSTRAINT FOREIGN KEY (lec_id) REFERENCES Lecturer (lec_id)
+                                          ON DELETE CASCADE ON UPDATE CASCADE
+
+
+);

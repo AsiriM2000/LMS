@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paymentAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentFormController">
+   <children>
+      <Label layoutX="82.0" layoutY="44.0" text="Dashboard -&gt; Payment" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="51.0" layoutY="113.0" prefHeight="45.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtRegId" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="265.0" promptText="H00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Id" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cmbCourseId" layoutX="383.0" layoutY="115.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane" />
+      <Label layoutX="409.0" layoutY="104.0" styleClass="textLabel" text="Course Id" />
+      <JFXComboBox fx:id="cmbMonth" layoutX="599.0" layoutY="114.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane" />
+      <Label layoutX="627.0" layoutY="103.0" styleClass="textLabel" text="Month" />
+      <AnchorPane layoutX="817.0" layoutY="113.0" prefHeight="45.0" prefWidth="172.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtAmount" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="145.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Payment" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnPayment" layoutX="1049.0" layoutY="122.0" onAction="#addPayment" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Payment">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1208.0" layoutY="121.0" onAction="#PaymentViewOnAction" prefHeight="5.0" prefWidth="100.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 8;" text="View">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="51.0" layoutY="254.0" prefHeight="17.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtId" layoutX="42.0" layoutY="1.0" onAction="#searchOnAction" prefHeight="30.0" prefWidth="237.0" promptText="Search Student" styleClass="textField" />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="11.0" layoutY="4.0" pickOnBounds="true" AnchorPane.leftAnchor="11.0">
+               <image>
+                  <Image url="@../assets/style/L%20image/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="350.0" prefHeight="45.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtRegisterId" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="265.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Register Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="437.0" prefHeight="45.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtStudentName" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="265.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Student Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="534.0" prefHeight="45.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtCourse" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="265.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Course" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="632.0" prefHeight="45.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtMonthlyPayment" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="265.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Monthly Payment" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="724.0" prefHeight="45.0" prefWidth="287.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtAllPayment" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="265.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="All Payment" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="122.0" layoutY="785.0" onAction="#LoadOnAction" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Load Details">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="469.0" layoutY="350.0" prefHeight="421.0" prefWidth="835.0" style="-fx-background-color: #00adad;" styleClass="textPane">
+         <children>
+            <TableView fx:id="tblAllDetails" layoutX="29.0" layoutY="28.0" prefHeight="367.0" prefWidth="779.0">
+              <columns>
+                <TableColumn fx:id="colRegId" prefWidth="132.0" text="Register Id" />
+                  <TableColumn fx:id="colName" prefWidth="136.0" text="Student Name" />
+                  <TableColumn fx:id="colCourse" prefWidth="138.0" text="Course" />
+                  <TableColumn fx:id="colMonthPayment" prefWidth="141.0" text="Monthly Payment" />
+                  <TableColumn fx:id="colAllPayment" prefWidth="132.0" text="All Payment" />
+                  <TableColumn fx:id="colOption" prefWidth="99.0" text="Option" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="1234.0" layoutY="254.0" onMouseClicked="#printMouseClicked" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/style/L%20image/printer.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

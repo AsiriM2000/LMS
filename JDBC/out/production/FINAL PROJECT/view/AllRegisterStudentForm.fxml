@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="allStudentAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllRegisterStudentFormController">
+   <children>
+      <Label layoutX="72.0" layoutY="34.0" text="Dashboard -&gt; Register Studen -&gt; All Register Student" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="47.0" layoutY="178.0" prefHeight="617.0" prefWidth="1264.0" style="-fx-background-color: #00adad;" styleClass="textPane" AnchorPane.bottomAnchor="57.0" />
+      <TableView fx:id="tblAllStudentRegister" layoutX="72.0" layoutY="197.0" prefHeight="577.0" prefWidth="1214.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="114.0" text="Id" />
+            <TableColumn fx:id="colCourse" prefWidth="114.0" text="Course" />
+            <TableColumn fx:id="colBatch" prefWidth="112.0" text="Batch" />
+            <TableColumn fx:id="colName" prefWidth="113.0" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="108.0" text="Email" />
+            <TableColumn fx:id="colDob" prefWidth="118.0" text="DOB" />
+            <TableColumn fx:id="colAddress" prefWidth="127.0" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="128.0" text="City" />
+            <TableColumn fx:id="colOl" prefWidth="81.0" text="O/L" />
+            <TableColumn fx:id="colAl" prefWidth="103.0" text="A/L" />
+            <TableColumn fx:id="colFee" prefWidth="95.0" text="Register Fee" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1155.0" layoutY="83.0" onAction="#btnBackOnAction" prefHeight="17.0" prefWidth="156.0" style="-fx-background-color: #798DFD; -fx-background-radius: 8;" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeAnchor" prefHeight="852.0" prefWidth="1337.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <Label layoutX="82.0" layoutY="45.0" text="Dashboard -&gt; Employee" textFill="#1201ff" AnchorPane.bottomAnchor="790.0" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="82.0" layoutY="207.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmpId" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" promptText="E00-001" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Employee Id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="82.0" layoutY="286.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtFname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="First Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="82.0" layoutY="366.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtLname" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Last Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="82.0" layoutY="459.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Email" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="82.0" layoutY="538.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane">
+         <children>
+            <TextField fx:id="txtContact" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="321.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Contact" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="82.0" layoutY="618.0" prefHeight="45.0" prefWidth="159.0" styleClass="textPane" AnchorPane.bottomAnchor="189.0">
+         <children>
+            <TextField fx:id="txtSalary" layoutX="14.0" layoutY="10.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="133.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" text="Salary" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnEmployee" layoutX="639.0" layoutY="625.0" onAction="#btnAddEmployee" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Add Employee" AnchorPane.bottomAnchor="189.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="864.0" layoutY="622.0" onAction="#btnUpdateEmployee" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Update Employee" AnchorPane.bottomAnchor="189.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1092.0" layoutY="624.0" onAction="#btnDeleteEmployee" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Delete Employee" AnchorPane.bottomAnchor="189.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAllEmployee" layoutX="1081.0" layoutY="207.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-color: #ffd700; -fx-background-radius: 8;" text="All Employee">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

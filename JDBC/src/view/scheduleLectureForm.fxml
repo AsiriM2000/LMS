@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scheduleAnchor" prefHeight="400.0" prefWidth="600.0" styleClass="textPane" stylesheets="@../assets/style/FirstAdminLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScheduleLectureFormController">
+   <children>
+      <Label layoutX="22.0" layoutY="14.0" text="Schedule Lecture" textFill="#1201ff" AnchorPane.bottomAnchor="356.0" AnchorPane.leftAnchor="22.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbBatchName" layoutX="23.0" layoutY="81.0" prefHeight="38.0" prefWidth="191.0" styleClass="textPane" />
+      <Label layoutX="45.0" layoutY="73.0" styleClass="textLabel" text="Batch Name" />
+      <JFXComboBox fx:id="cmbSubjectId" layoutX="246.0" layoutY="80.0" prefHeight="38.0" prefWidth="145.0" styleClass="textPane" />
+      <Label layoutX="264.0" layoutY="72.0" styleClass="textLabel" text="Subject Id" />
+      <JFXComboBox fx:id="cmbLecturerId" layoutX="430.0" layoutY="78.0" prefHeight="38.0" prefWidth="151.0" styleClass="textPane" />
+      <Label layoutX="449.0" layoutY="70.0" prefHeight="17.0" prefWidth="79.0" styleClass="textLabel" text="Lecturer Id" />
+      <DatePicker fx:id="cmbDate" layoutX="23.0" layoutY="152.0" prefHeight="39.0" prefWidth="191.0" styleClass="textPane" />
+      <Label layoutX="42.0" layoutY="144.0" styleClass="textLabel" text="Date" />
+      <Separator layoutX="26.0" layoutY="239.0" prefHeight="0.0" prefWidth="547.0" />
+      <JFXButton layoutX="473.0" layoutY="340.0" onAction="#cancelOnAction" prefHeight="8.0" prefWidth="100.0" style="-fx-background-color: #7C20DD; -fx-background-radius: 8;" styleClass="textPane" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTimePicker fx:id="time" defaultColor="#191e1e" layoutX="246.0" layoutY="153.0" prefHeight="38.0" prefWidth="145.0" styleClass="textPane" />
+      <JFXButton layoutX="248.0" layoutY="341.0" onAction="#saveOnAction" prefHeight="8.0" prefWidth="100.0" style="-fx-background-color: #32cd32; -fx-background-radius: 8;" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="362.0" layoutY="341.0" onAction="#viewOnAction" prefHeight="8.0" prefWidth="100.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 8;" text="View">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
